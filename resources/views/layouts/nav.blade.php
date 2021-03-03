@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
                 <a href="#" class="nav-item nav-link active">Home</a>
-                <a href="#" class="nav-item nav-link">Add Questions</a>
+                <a href="{{ route('questions.add') }}" class="nav-item nav-link">Add Questions</a>
                 <a href="#" class="nav-item nav-link">About</a>
                 <a href="#" class="nav-item nav-link">Contact</a>
             </div>

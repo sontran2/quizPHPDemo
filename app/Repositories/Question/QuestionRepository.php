@@ -7,6 +7,6 @@ class QuestionRepository extends BaseRepository implements QuestionRepositoryInt
 {
     public function getModel()
     {
-        return \App\Models\Question::class;
+        return \App\Models\Questions::class;
     }
 }

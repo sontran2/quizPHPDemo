@@ -4,11 +4,7 @@
     <meta charset="utf-8">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Styles -->
+        <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -16,5 +12,9 @@
 <div class="container-fluid">
    @yield('content')
 </div>
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}" defer></script>
+@stack('scripts')
 </body>
+
 </html>

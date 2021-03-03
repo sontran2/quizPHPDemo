@@ -2,10 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\Question\QuestionRepositoryInterface;
 use Illuminate\Http\Request;
 
 class QuestionController extends Controller
 {
+    protected  $questionRepo;
+
+    public function __construct(QuestionRepositoryInterface $questionRepo)
+    {
+        $this->questionRepo = $questionRepo;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +20,7 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        dd('ewewewew');
+        $products = $this->questionRepo->getAll();
     }
 
     /**
@@ -23,7 +30,7 @@ class QuestionController extends Controller
      */
     public function create()
     {
-        //
+        return view('questions.add');
     }
 
     /**
